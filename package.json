@@ -10,13 +10,9 @@
   "keywords": [
     "NodeJS-starter"
   ],
-  "bin": "./dist/src/server.js",
-  "pkg": {
-    "assets": ".env"
-  },
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "build": "tsc && pkg -o .server .",
+    "build": "tsc && pkg ./dist/src/server.js -o .server",
     "start": "./.server",
     "test": "jest --runInBand",
     "format": "prettier --write .",
